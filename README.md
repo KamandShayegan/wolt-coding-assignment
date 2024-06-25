@@ -1,6 +1,7 @@
 # wolt
 
-A new Flutter project for Wolt's hiring assignment (developer's notes below)
+A new Flutter project for Wolt's hiring assignment (developer's notes below) \
+__Check demo at: https://youtu.be/j0EsBEPtfLQ__
 ## Assignment
 ### Concept
 A user is walking around Helsinki city center looking for a place to eat. 
@@ -63,4 +64,5 @@ For API calls, the `Dio` library is used. The default HTTP library is an alterna
 - States of the API were not in the scope of the task, but `loading` and `success` were implemented to show effective loading. Other states can be implemented as well.
 - UI was said to be flexible, and a rectangular image was chosen for the images of the venues. Square images are possible to implement. 
 - The trailing zeros in "24.936210" do not change the precision or the location being described. Both "24.93621" and "24.936210" point to the same place on the Earth's surface.
+- The application does not support counting in the background
 
