@@ -59,7 +59,7 @@ For API calls, the `Dio` library is used. The default HTTP library is an alterna
 
 ### Logic, Notes, and Future work
 - The application extensively uses `async/await` to manage async operations for fetching the storage data, performing API calls, etc. 
-- `Stack` is used to show loading on top of the list because 10 seconds is rather short to change the entire screen just to show the loading widget.
+- `Stack` is used to show loading on top of the list because 10 seconds is rather short to change the entire screen just to show the loading widget. Also, stack lets the user continue toggle favorites even during the loading state.
 - `BaseViewModel` was chosen as a single viewmodel to contain the logic. In case of more functionalities and bigger applications, the ViewModel can be separated into multiple viewmodels to follow _the separation of concerns_ more precisely.
 - States of the API were not in the scope of the task, but `loading` and `success` were implemented to show effective loading. Other states can be implemented as well.
 - UI was said to be flexible, and a rectangular image was chosen for the images of the venues. Square images are possible to implement. 
