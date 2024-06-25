@@ -1,16 +1,28 @@
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:wolt/services/local_storage_service.dart';
+import 'package:wolt/services/looper.dart';
 import 'package:wolt/viewmodels/base_viewmodel.dart';
 import 'package:wolt/views/venue_page.dart';
 
 void main() async {
+  //manual DI
+  final dio = Dio();
+  final LoopingService loopingService = LoopingService();
   WidgetsFlutterBinding.ensureInitialized();
   final localStorageService = LocalStorageService();
   await localStorageService.initializeStorage();
+
   runApp(
-    ChangeNotifierProvider(
-        create: (_) => BaseViewmodel(), child: const MyApp()),
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (_) => BaseViewmodel(dio, loopingService),
+        ),
+      ],
+      builder: (context, widget) => const MyApp(),
+    ),
   );
 }
 

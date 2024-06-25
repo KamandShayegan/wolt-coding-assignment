@@ -2,13 +2,9 @@ class VenueModel {
   final String id;
   final String name;
   final String shortDescription;
-  bool isFavorite;
 
   VenueModel(
-      {required this.id,
-      required this.name,
-      required this.shortDescription,
-      this.isFavorite = false});
+      {required this.id, required this.name, required this.shortDescription});
 
   factory VenueModel.fromJson(Map<String, dynamic> json) {
     return VenueModel(

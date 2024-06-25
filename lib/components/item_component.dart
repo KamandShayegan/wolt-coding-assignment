@@ -49,6 +49,14 @@ class ItemComponent extends StatelessWidget {
           InkWell(
         onTap: () {
           context.read<BaseViewmodel>().toggleFavorite(venueId!);
+          print("VanueID of: $venueId : $isFavorite");
+          List<String> faves = context.read<BaseViewmodel>().getFavorites();
+          print("local faves: $faves");
+          context.read<BaseViewmodel>().initializeFavorites();
+          print("is in local faves: ${faves.contains(venueId)}");
+          List<String> faves2 = context.read<BaseViewmodel>().getFavorites();
+          print("storage faves: $faves2");
+          print("is in storage faves: ${faves2.contains(venueId)}");
         },
         child: SvgPicture.asset(
           isFavorite ? Constants.favoriteTrue : Constants.favoriteFalse,

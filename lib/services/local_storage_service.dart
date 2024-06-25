@@ -24,16 +24,7 @@ class LocalStorageService {
   }
 
   Future<List<String>> getIDs() async {
-    return _sharedPref.getStringList(_listKey) ?? [];
+    List<String> ids = _sharedPref.getStringList(_listKey) ?? [];
+    return ids;
   }
-
-  // Future setID(int id) async {
-  //   await _sharedPref.setInt('id', id);
-  // }
-
-  // Future delId(int id) async {
-  //   await _sharedPref.remove('id');
-  // }
-
-  // Future<int?> getID() async => _sharedPref.getInt('id');
 }
