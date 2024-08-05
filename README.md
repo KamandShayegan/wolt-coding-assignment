@@ -8,12 +8,9 @@
 - **Flutter**: You need to have Flutter installed. Follow the instructions on the [Flutter official website](https://flutter.dev/docs/get-started/install) to install it.
 - **Dart**: Flutter comes with Dart, but ensure you have the latest version by running `flutter upgrade`.
 2. Clone Repository
-3. Install Dependencies:
-- `flutter pub get`
-4. Device:
-- Connect your device by cable or run an emulator (AVD)
-5. Run the app:
-- `Flutter run`
+3. Install Dependencies: `flutter pub get`
+4. Connect your device by cable or run an emulator (AVD)
+5. Run the app: `Flutter run`
 
 ## Assignment Description
 A user is walking around Helsinki city center looking for a place to eat. 
