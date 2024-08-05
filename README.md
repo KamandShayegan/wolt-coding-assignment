@@ -1,9 +1,21 @@
-# wolt
+# Wolt's Coding Assignment
 
-A new Flutter project for Wolt's hiring assignment (developer's notes below) \
-__Check demo at: https://youtu.be/j0EsBEPtfLQ__
-## Assignment
-### Concept
+### Demo
+[![Wolts Hiring Assignment Demo](https://img.youtube.com/vi/j0EsBEPtfLQ/0.jpg)](https://youtu.be/j0EsBEPtfLQ)
+
+## Installation
+1. Pre-requisites:
+- **Flutter**: You need to have Flutter installed. Follow the instructions on the [Flutter official website](https://flutter.dev/docs/get-started/install) to install it.
+- **Dart**: Flutter comes with Dart, but ensure you have the latest version by running `flutter upgrade`.
+2. Clone Repository
+3. Install Dependencies:
+- `flutter pub get`
+4. Device:
+- Connect your device by cable or run an emulator (AVD)
+5. Run the app:
+- `Flutter run`
+
+## Assignment Description
 A user is walking around Helsinki city center looking for a place to eat. 
 
 ### Input
@@ -14,8 +26,7 @@ A user is walking around Helsinki city center looking for a place to eat.
 Displays a list of venues for the current location of the user. The list contains a maximum of 15 venues (when the server response has more it uses the first 15). The current location is taken from the input list and changes every 10 seconds (your app should refresh the list automatically and user\'s location loops after it reaches the end).
 Each venue has “Favorite” action next to it. “Favourite” works as a toggle (true/false) and changes the icon depending on the state. The app remembers these states and re-applies them to venues that come from the server again every time the app is launched.
 
-### Data
-#### API endpoint:
+### API endpoint
 GET https://restaurant-api.wolt.com/v1/pages/restaurants?lat=60.170187&lon=24.930599
 
 ### Coordinates
@@ -35,7 +46,7 @@ coordinates = [
 ];
 ```
 ### Assets
-Favorite (true): https://material.io/tools/icons/?icon=favorite&style=baseline
+Favorite (true): https://material.io/tools/icons/?icon=favorite&style=baseline \
 Favorite (false): https://material.io/tools/icons/?icon=favorite_border&style=baseline
  
  ## Developer\'s Notes
